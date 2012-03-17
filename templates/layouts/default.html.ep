@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+  <meta charset="<%= app->renderer->encoding %>">
+  <title><%= title %></title>
+  <%= stylesheet '/gcp/prettify.css' %>
+  <%= stylesheet '/tb/css/bootstrap.min.css' %>
+  <%= stylesheet '/tb/css/bootstrap-responsive.min.css' %>
+  <%= stylesheet '/vegas/jquery.vegas.css' %>
+  <%= stylesheet '/css/app.css' %>
+</head>
+<body>
+  <div class="container">
+    <div id="pjaxbody">
+      %= include 'header'
+      <div class="alert alert-info">
+        <h2>レイアウト名 : default</h2>
+      </div>
+      <%= content %>
+    </div>
+    <footer class="well pull-right">
+      <%= link_to '@nqounet' => "http://twitter.com/nqounet", target => "_blank" %>
+      Powerd by Mojolicious <%= $Mojolicious::VERSION %>
+    </footer>
+  </div>
+  <%= javascript '/js/jquery.js' %>
+  <%= javascript '/gcp/prettify.js' %>
+  <%= javascript '/vegas/jquery.vegas.js' %>
+  <%= javascript '/tb/js/bootstrap.min.js' %>
+  <%= javascript '/js/jquery.pjax.js' %>
+  <%= javascript '/js/app.js' %>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<title><%= title %></title>
+%= include 'header'
+<div class="alert alert-info">
+  <h2>レイアウト名 : pjax</h2>
+</div>
+<%= content %>
+<script>prettyPrint();</script>

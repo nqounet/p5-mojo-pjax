@@ -1,0 +1,20 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "Mojolicious and PJAX" => "/", class => 'brand pull-right' %>
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="<%= $self->tx->req->url->path eq "/" ? "active" : "" %>"><%= link_to "Top" => "/", class => 'pjax' %></li>
+          <li class="<%= $self->tx->req->url->path eq "/pjax" ? "active" : "" %>"><%= link_to "PJAX" => "/pjax", class => 'pjax' %></li>
+          <li class="<%= $self->tx->req->url->path eq "/vegas" ? "active" : "" %>"><%= link_to "Vegas" => "/vegas", class => 'pjax' %></li>
+          <li class="<%= $self->tx->req->url->path eq "/null" ? "active" : "" %>"><%= link_to "Null" => "/null", class => 'pjax' %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

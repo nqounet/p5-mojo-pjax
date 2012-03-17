@@ -1,0 +1,21 @@
+% title 'Welcome to PJAX!';
+<div class="well">
+  <h1><%= title %><h1>
+  <blockquote>
+    <p>pushState + ajax = pjax</p>
+    <small>Chris Wanstrath</small>
+  </blockquote>
+</div>
+
+<div id="wrap" class="container">
+  <div id="main" class="row">
+    <div id="contents" class="span12">
+      <div class="well">
+        <h2>jquery-pjax</h2>
+        <p>https://github.com/defunkt/jquery-pjax</p>
+        <h2>HTTPヘッダ</h2>
+        <pre><%= $self->req->headers->to_string %></pre>
+      </div>
+    </div><!-- #contents -->
+  </div><!-- #main -->
+</div><!-- #wrap -->
